@@ -1,0 +1,23 @@
+version: "3.7"
+services:
+  # GERENCIADOR DE CONTAINERS
+  portainer:
+    image: portainer/portainer:latest
+    restart: always
+    container_name: portainer
+    ports:
+      - "9000:9000"
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - portainerdata:/data
+
+  backend:
+    build: "./"
+    container_name: backend
+    restart: always
+    privileged: true
+    ports:
+      - "3000:3000"
+
+volumes:
+  portainerdata:
