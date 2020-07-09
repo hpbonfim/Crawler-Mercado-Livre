@@ -14,10 +14,10 @@ application.use(cors())
 
 exports.serverControl = () => {
 
-    startService = async () => {
+    startService = () => {
         console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] initiate service...`)
         try {
-            await server.listen(port, () => {
+            server.listen(port, () => {
                 console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] server it's running on port: ${port}`)
             })
 
@@ -26,9 +26,14 @@ exports.serverControl = () => {
         }
     }
 
-    stopService = async () => {
+    stopService = () => {
         console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] stopping service...`)
-        await server.close()
+        try {
+            server.close()
+            console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] closed.`)
+        } catch (error) {
+            errorService(error)
+        }
     }
 
     errorService = (error) => {

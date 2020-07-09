@@ -34,17 +34,19 @@ exports.crawlerService = (req, res) => {
 
                         // tratamento de names
                         const nameTitle = response.$(elem).find('span.main-title').text().trim() // quando search for genérico
-                        const nameSubtitle = response.$(elem).find('.item_subtitle').text().trim() // quando search = apartamento
+                        const nameSubtitle = response.$(elem).find('.item_subtitle').text().trim() // outros tipos de search. ex: apartamento
                         const setName = nameTitle !== "" ? nameTitle : nameSubtitle
 
                         // tratamento do link
                         const setLink = response.$(elem).find('a').attr("href")
 
                         // tratamento de prices
-                        const price = Number(response.$(elem).find('.item__price > .price__decimals').text().trim())
-                        const chooseValue = price === 0 ? "" : `,${price}`
-                        const setValue = response.$(elem).find('.item__price > .price__symbol').text().trim() +
-                            response.$(elem).find('.item__price > .price__fraction').text().trim() + chooseValue
+                        const priceSymbol = response.$(elem).find('.item__price > .price__symbol').text().trim()
+                        const priceInteger = response.$(elem).find('.item__price > .price__fraction').text().trim() 
+                        const priceDecimal = Number(response.$(elem).find('.item__price > .price__decimals').text().trim())
+                        const chooseValue = priceDecimal === 0 ? "" : `,${priceDecimal}`
+                        const setValue = priceSymbol === "" ? null : priceSymbol + priceInteger + chooseValue
+
 
                         // tratamento do stores
                         const store = response.$(elem).find('.item__brand').text().trim()

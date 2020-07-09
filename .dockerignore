@@ -1,0 +1,9 @@
+.git
+.cache
+*.md
+Dockerfile
+tmp
+public
+scripts
+collection.json
+test

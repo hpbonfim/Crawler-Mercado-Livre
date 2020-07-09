@@ -52,8 +52,8 @@
 [
     {
         "name": String, // Nome do produto
-        "link": String,// Link do produto
-        "price": Number, // Preço
+        "link": String, // Link do produto
+        "price": Number, // Preço, se houver (dafault: 0)
         "store": String, // Nome da loja, se houver (dafault: null)
         "state": String // Estado, se houver (dafault: null)
     }
@@ -87,4 +87,5 @@ $ npm test
 |[Cors](https://www.npmjs.com/package/cors)     |
 |[Crawler](https://www.npmjs.com/package/crawler)   |
 |[Express](https://www.npmjs.com/package/express)   |
+|[ANSI codes for console colors](https://gist.github.com/hpbonfim/d54624baaecb0e8fae3da63075c94f7a)|
 
