@@ -1,0 +1,15 @@
+{
+  "name": "api",
+  "version": "1.0.0",
+  "description": "Template-API-Javascript",
+  "main": "start.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "Henrique Bonfim",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "jest": "^26.1.0"
+  }
+}
