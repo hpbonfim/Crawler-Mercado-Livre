@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crawler Mercado Livre</title>
+
+    </script>
+    <link href="./styles.css" rel="stylesheet" type="text/css">
+    <script>
+
+
+        var mock = [
+            {
+                id: "0",
+                name: "Equipe Super",
+                link: "Brasil",
+                price: 0,
+                store: "dsa",
+                state: "123"
+            },
+            {
+                id: "1",
+                name: "Time Maximo",
+                link: "EUA",
+                price: 0,
+                store: "vcx",
+                state: "543"
+            },
+            {
+                id: "2",
+                name: "Mega Grupo",
+                link: "Canadá",
+                price: 0,
+                store: "nbv",
+                state: "65"
+            },
+            {
+                id: "3",
+                name: "Equipe Super",
+                link: "Brasil",
+                price: 0,
+                store: "dsa",
+                state: "123"
+            },
+            {
+                id: "4",
+                name: "Time Maximo",
+                link: "EUA",
+                price: 0,
+                store: "vcx",
+                state: "543"
+            },
+            {
+                id: "5",
+                name: "Mega Grupo dsasd dsadsa dsad sa dsadsa ",
+                link: "Canadá",
+                price: 0,
+                store: "nbv",
+                state: "65"
+            },
+            {
+                id: "6",
+                name: "Equipe Super",
+                link: "Brasil",
+                price: 0,
+                store: "dsa",
+                state: "123"
+            },
+            {
+                id: "7",
+                name: "Time Maximo",
+                link: "EUA",
+                price: 0,
+                store: "vcx",
+                state: "543"
+            },
+            {
+                id: "8",
+                name: "Mega Grupo",
+                link: "Canadá",
+                price: 0,
+                store: "nbv",
+                state: "65"
+            }
+        ]
+
+        showResults = () => {
+
+            let lista = mock.map((info, indice) => {
+                return `<div>
+                            <span><b>ID: </b>${info.id}</span>
+                            <span><b>Name: </b>${info.name}</span>
+                            <span><b>Link: </b><a href="${info.link}" target="_blank"> Link do produto </a></span>
+                            <span><b>Price: </b>R$:${info.price}</span>
+                            <span><b>Store: </b>${info.store}</span>
+                            <span><b>State: </b>${info.state}</span>
+                    </div>
+                    `
+            })
+            document.querySelector('.container-items').innerHTML = lista.join("")
+        }
+
+    </script>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Crawler<br>Mercado Livre</h1>
+        <input type="text" class="feedback-input" placeholder="Digite a Palavra-chave" id="search" />
+        <input type="number" class="feedback-input" placeholder="Digite o número limite para busca" id="limit" />
+        <div class="button">
+            <input type="submit" onclick="showResults()" class="button-blue" />
+            <div class="ease"></div>
+        </div>
+    </div>
+
+
+    <div class="container-items"></div>
+
+</body>
+
+</html>
