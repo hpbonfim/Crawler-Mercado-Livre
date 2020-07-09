@@ -4,7 +4,6 @@ services:
   portainer:
     image: portainer/portainer:latest
     restart: always
-    container_name: portainer
     ports:
       - "9000:9000"
     volumes:
@@ -15,7 +14,6 @@ services:
 
   backend:
     build: "./"
-    container_name: backend
     restart: always
     privileged: true
     ports:
