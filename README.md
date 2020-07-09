@@ -39,6 +39,8 @@
 
 </p>
 
+
+
 ### Endpoints API
 
 
@@ -59,7 +61,10 @@
 ```
 
 
+[Repositório do backend no Dockerhub](https://hub.docker.com/repository/docker/hpbonfim/crawler-mercadolivre)
+
 ### Para iniciar o Backend
+
 
 ``` 
 $ npm install

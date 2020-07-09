@@ -13,7 +13,7 @@ services:
       - aws
 
   backend:
-    build: "./"
+    image: hpbonfim/crawler-mercadolivre:latest
     restart: always
     privileged: true
     ports:
