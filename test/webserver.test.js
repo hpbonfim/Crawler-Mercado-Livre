@@ -1,7 +1,7 @@
-const { serverControl } = require('../backend/core/server/index')
+const { serverControl } = require('../backend/core/server/express')
 
-describe('A function webserver está sendo importado', () => {
-    test('Deve conter o method @startService e @stopService ', () => {
+describe('O webserver service está sendo importado', () => {
+    test('Deve conter os serviços @startService e @stopService ', () => {
         const webserver = serverControl();
         expect(webserver).toHaveProperty('startService')
         expect(webserver).toHaveProperty('stopService')
@@ -9,13 +9,9 @@ describe('A function webserver está sendo importado', () => {
 })
 
 describe('webserver quando inicializado', () => {
-    test('Não deve retornar erros ', () => {
+    test('Os serviços @startService, @stopService não devem retornar erros ', () => {
         const webserver = serverControl();
-        expect(() => {
-            webserver.startService()
-        }).not.toThrow()
-        expect(() => {
-            webserver.stopService()
-        }).not.toThrow()
+        expect(() => { webserver.startService() }).not.toThrow()
+        expect(() => { webserver.stopService() }).not.toThrow()
     })
 })

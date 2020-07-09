@@ -1,10 +1,4 @@
-const { systemControl } = require('./backend/index')
+const { systemControl } = require('./backend/system')
 
-try {
-    // TODO
-    systemControl().startService()
-    process.on('SIGINT', () => systemControl().stopService())
-}
-catch (error) {
-    systemControl().errorService(error)
-}
+systemControl().startService()
+process.on('SIGINT', () => systemControl().stopService())

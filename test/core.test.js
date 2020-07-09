@@ -1,17 +1,15 @@
-const { createCore } = require('../backend/core/index')
+const { createCore } = require('../backend/core/core')
 
-describe('A function core está sendo importado', () => {
-    test('Deve conter o method @startService, @stopService e @errorService ', () => {
+describe('O core service está sendo importado', () => {
+    test('Deve conter os serviços @startService, @stopService ', () => {
         const core = createCore();
         expect(core).toHaveProperty('startService')
         expect(core).toHaveProperty('stopService')
-        expect(core).toHaveProperty('errorService')
-
     })
 })
 
-describe('A function core quando inicializado', () => {
-    test('Não deve retornar erros ', () => {
+describe('createCore quando inicializado', () => {
+    test('Os serviços @startService, @stopService não devem retornar erros ', () => {
         const core = createCore();
         expect(() => { core.startService() }).not.toThrow()
         expect(() => { core.stopService() }).not.toThrow()

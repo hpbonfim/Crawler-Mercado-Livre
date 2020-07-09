@@ -4,11 +4,16 @@
   "description": "Template-API-Javascript",
   "main": "start.js",
   "scripts": {
+    "start": "node start.js",
     "test": "jest"
   },
   "author": "Henrique Bonfim",
   "license": "ISC",
-  "dependencies": {},
+  "dependencies": {
+    "cors": "^2.8.5",
+    "crawler": "^1.2.2",
+    "express": "^4.17.1"
+  },
   "devDependencies": {
     "jest": "^26.1.0"
   }
