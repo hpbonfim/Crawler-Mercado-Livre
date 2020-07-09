@@ -1,7 +1,7 @@
 {
-  "name": "api",
+  "name": "crawler-mercado-livre",
   "version": "1.0.0",
-  "description": "Template-API-Javascript",
+  "description": "Javascript API para coleta de dados do site mercado livre",
   "main": "start.js",
   "scripts": {
     "start": "node start.js",

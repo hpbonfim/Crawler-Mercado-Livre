@@ -1,0 +1,95 @@
+{
+    "_type": "export",
+    "__export_format": 4,
+    "__export_date": "2020-07-09T10:31:48.114Z",
+    "__export_source": "insomnia.desktop.app:v2020.2.2",
+    "resources": [
+        {
+            "_id": "req_256c107269ec488db954d30bf0191c2d",
+            "authentication": {},
+            "body": {
+                "mimeType": "application/x-www-form-urlencoded",
+                "params": [
+                    {
+                        "description": "",
+                        "id": "pair_24b732dd377c4678b24f0bd0ede81623",
+                        "name": "search",
+                        "value": "apartamento"
+                    },
+                    {
+                        "description": "",
+                        "id": "pair_092aa1c1a7c0453d9629cfa0dc70ab72",
+                        "name": "limit",
+                        "value": "5"
+                    }
+                ]
+            },
+            "created": 1594290503983,
+            "description": "",
+            "headers": [
+                {
+                    "id": "pair_95444348935945b38df42b4b01afccd3",
+                    "name": "Content-Type",
+                    "value": "application/x-www-form-urlencoded"
+                }
+            ],
+            "isPrivate": false,
+            "metaSortKey": -1594290503983,
+            "method": "POST",
+            "modified": 1594290536165,
+            "name": "Busca",
+            "parameters": [],
+            "parentId": "wrk_ed445278cff44a1fa75516edd0b1367c",
+            "settingDisableRenderRequestBody": false,
+            "settingEncodeUrl": true,
+            "settingFollowRedirects": "global",
+            "settingRebuildPath": true,
+            "settingSendCookies": true,
+            "settingStoreCookies": true,
+            "url": "localhost:3000",
+            "_type": "request"
+        },
+        {
+            "_id": "wrk_ed445278cff44a1fa75516edd0b1367c",
+            "created": 1594290481095,
+            "description": "",
+            "modified": 1594290481095,
+            "name": "Crawler",
+            "parentId": null,
+            "scope": null,
+            "_type": "workspace"
+        },
+        {
+            "_id": "env_60c4e9cb7cad31ba40d35996243f52fedf17ae46",
+            "color": null,
+            "created": 1594290481285,
+            "data": {},
+            "dataPropertyOrder": null,
+            "isPrivate": false,
+            "metaSortKey": 1594290481285,
+            "modified": 1594290481285,
+            "name": "Base Environment",
+            "parentId": "wrk_ed445278cff44a1fa75516edd0b1367c",
+            "_type": "environment"
+        },
+        {
+            "_id": "jar_60c4e9cb7cad31ba40d35996243f52fedf17ae46",
+            "cookies": [],
+            "created": 1594290481290,
+            "modified": 1594290481290,
+            "name": "Default Jar",
+            "parentId": "wrk_ed445278cff44a1fa75516edd0b1367c",
+            "_type": "cookie_jar"
+        },
+        {
+            "_id": "spc_8bf30cebb8ca49b58fe4b0d12bccc229",
+            "contentType": "yaml",
+            "contents": "",
+            "created": 1594290481109,
+            "fileName": "Crawler",
+            "modified": 1594290481109,
+            "parentId": "wrk_ed445278cff44a1fa75516edd0b1367c",
+            "_type": "api_spec"
+        }
+    ]
+}
