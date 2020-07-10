@@ -7,7 +7,7 @@ const serviceRoutes = require('./routes/index')
 const cors = require('cors')
 const port = 3000
 
-application.use(bodyParser.urlencoded({ extended: true }))
+application.use(bodyParser.urlencoded({ extended: false }))
 application.use(bodyParser.json())
 application.use("/", serviceRoutes)
 application.use(cors())
@@ -20,7 +20,6 @@ exports.serverControl = () => {
             server.listen(port, () => {
                 console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] server it's running on port: ${port}`)
             })
-
         } catch (error) {
             errorService(error)
         }

@@ -2,7 +2,7 @@ const { serverControl } = require('./server/express')
 const server = serverControl()
 
 exports.createCore = () => {
-
+    
     startService = () => {
         console.log("\x1b[36m", `${new Date().toLocaleString('pt-BR')} | [core] initiate service...`)
         server.startService()

@@ -42,11 +42,12 @@ exports.crawlerService = (req, res) => {
 
                         // tratamento de prices
                         const priceSymbol = response.$(elem).find('.item__price > .price__symbol').text().trim()
-                        const priceInteger = response.$(elem).find('.item__price > .price__fraction').text().trim() 
-                        const priceDecimal = Number(response.$(elem).find('.item__price > .price__decimals').text().trim())
-                        const chooseValue = priceDecimal === 0 ? "" : `,${priceDecimal}`
-                        const setValue = priceSymbol === "" ? null : priceSymbol + priceInteger + chooseValue
-
+                        const priceInteger = response.$(elem).find('.item__price > .price__fraction').text().trim()
+                        const priceDecimal = response.$(elem).find('.item__price > .price__decimals').text().trim()
+                        const chooseFloatValue = priceDecimal === "" ? "" : `.${priceDecimal}`
+                        const chooseValue = priceSymbol === "" ? 0 : priceInteger + chooseFloatValue
+                        const treatValue = typeof chooseValue === "string" ? chooseValue.split('.').join("") : chooseValue
+                        const setPrice = Number(treatValue) // Number(treatValue) remove os pontos do valor. caso necessite, use chooseValue retorna o número formatado em string
 
                         // tratamento do stores
                         const store = response.$(elem).find('.item__brand').text().trim()
@@ -63,7 +64,7 @@ exports.crawlerService = (req, res) => {
                             id: i,
                             name: setName,
                             link: setLink,
-                            price: setValue,
+                            price: setPrice,
                             store: setStore,
                             state: setState
                         }
@@ -72,12 +73,10 @@ exports.crawlerService = (req, res) => {
                     })
                     if (items.length == 0)
                         return res.status(404).json({ error: 'Não há anúncios que coincidam com a sua busca.' })
-                    else {
-                        return (
-                            res.status(200).json(items),
-                            done()
-                        )
-                    }
+                    return (
+                        res.status(200).json(items),
+                        done()
+                    )
                 }
             }
         }])

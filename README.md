@@ -39,6 +39,11 @@
 
 </p>
 
+<p align="center">
+<a href="http://crawler-page.s3-website-sa-east-1.amazonaws.com/" target="_blank">
+<img src="https://img.shields.io/badge/AWS%20DEPLOY-TEST%20API-success?style=for-the-badge&logo=amazon-aws" alt="AWS Deploy">
+</a>
+
 
 
 ### Endpoints API

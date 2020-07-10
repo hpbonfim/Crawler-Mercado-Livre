@@ -16,6 +16,5 @@
   },
   "devDependencies": {
     "jest": "^26.1.0"
-  },
-  "proxy":"http://crawler-page.s3-website-sa-east-1.amazonaws.com"
+  }
 }

@@ -11,7 +11,8 @@ services:
       - portainerdata:/data
     networks:
       - aws
-
+      
+  # BACKEND
   backend:
     image: hpbonfim/crawler-mercadolivre:latest
     restart: always
