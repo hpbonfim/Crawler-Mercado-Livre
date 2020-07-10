@@ -59,9 +59,9 @@
         "id": Number,
         "name": String, // Nome do produto
         "link": String, // Link do produto
-        "price": Number, // Preço, se houver (dafault: 0)
-        "store": String, // Nome da loja, se houver (dafault: null)
-        "state": String // Estado, se houver (dafault: null)
+        "price": Number, // Preço, se houver (default: 0)
+        "store": String, // Nome da loja, se houver (default: null)
+        "state": String // Estado, se houver (default: null)
     }
 ]
 ```
