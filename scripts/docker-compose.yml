@@ -3,7 +3,6 @@ services:
   # GERENCIADOR DE CONTAINERS
   portainer:
     image: portainer/portainer:latest
-    restart: always
     ports:
       - "9000:9000"
     volumes:
@@ -15,8 +14,6 @@ services:
   # BACKEND
   backend:
     image: hpbonfim/crawler-mercadolivre:latest
-    restart: always
-    privileged: true
     ports:
       - "3000:3000"
     networks:

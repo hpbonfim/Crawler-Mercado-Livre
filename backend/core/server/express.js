@@ -1,7 +1,6 @@
 const express = require('express')
 const application = express()
 const http = require('http')
-const server = http.createServer(application)
 const bodyParser = require('body-parser')
 const serviceRoutes = require('./routes/index')
 const cors = require('cors')
@@ -9,14 +8,16 @@ const port = 3000
 
 application.use(bodyParser.urlencoded({ extended: false }))
 application.use(bodyParser.json())
-application.use("/", serviceRoutes)
 application.use(cors())
+application.use("/", serviceRoutes)
 
 exports.serverControl = () => {
+    const server = http.createServer(application)
 
     startService = () => {
         console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] initiate service...`)
         try {
+
             server.listen(port, () => {
                 console.log(`${new Date().toLocaleString('pt-BR')} | [webserver] server it's running on port: ${port}`)
             })

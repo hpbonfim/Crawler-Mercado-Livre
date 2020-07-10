@@ -40,7 +40,7 @@
 </p>
 
 <p align="center">
-<a href="http://crawler-page.s3-website-sa-east-1.amazonaws.com/" target="_blank">
+<a href="http://ec2-18-230-150-87.sa-east-1.compute.amazonaws.com:3000/" target="_blank">
 <img src="https://img.shields.io/badge/AWS%20DEPLOY-TEST%20API-success?style=for-the-badge&logo=amazon-aws" alt="AWS Deploy">
 </a>
 
@@ -50,12 +50,13 @@
 
 
 - **POST**: `"/"` - **body: { search: string, limit: number }**   
--- Realiza a consulta no site, trazendo o resultado via JSON [Mercado Livre](https://lista.mercadolivre.com.br/${search}) ( Type: x-www-form-urlencoded )
+-- Realiza a consulta no site, trazendo o resultado via JSON [Mercado Livre](https://lista.mercadolivre.com.br/${search})
 
 #### Retorno Esperado
 ```
 [
     {
+        "id": Number,
         "name": String, // Nome do produto
         "link": String, // Link do produto
         "price": Number, // Preço, se houver (dafault: 0)
