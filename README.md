@@ -39,10 +39,6 @@
 
 </p>
 
-<p align="center">
-<a href="http://ec2-18-230-150-87.sa-east-1.compute.amazonaws.com:3000/" target="_blank">
-<img src="https://img.shields.io/badge/AWS%20DEPLOY-TEST%20API-success?style=for-the-badge&logo=amazon-aws" alt="AWS Deploy">
-</a>
 
 
 
